@@ -1,0 +1,980 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BPMaster</name>
+    </assembly>
+    <members>
+        <member name="M:BPMaster.Controllers.v1.RequestController.GetSendingRequestList(System.String,BPMaster.Domains.Dtos.PaginationDto,BPMaster.Domains.Dtos.SortSendToSAPDto)">
+            <summary>
+            This api is for manually update function page: get list of request that has sending status
+            </summary>
+        </member>
+        <member name="M:BPMaster.Controllers.v1.RequestController.GetSendingFailList(System.String,BPMaster.Domains.Dtos.PaginationDto)">
+            <summary>
+            This api is for manually update function page: get list of request that has fail status
+            </summary>
+        </member>
+        <member name="M:BPMaster.Controllers.v1.RequestController.GetSendFailRequestList(System.String,BPMaster.Domains.Dtos.PaginationDto,BPMaster.Domains.Dtos.SortSendFailDto)">
+            <summary>
+            This api is for manually update function page: get list of request that has send fail status
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BankInformationController.ImportExcelFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            This api is for bank key page: Import file bank key information
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+            <exception cref="T:Common.Application.Exceptions.NonAuthenticateException"></exception>
+            <exception cref="T:Common.Application.Exceptions.BadRequestException"></exception>
+            <exception cref="T:Common.Application.Exceptions.NotFoundException"></exception>
+        </member>
+        <member name="M:Controllers.v1.BankInformationController.GetAllBankKey(System.String,BPMaster.Domains.Dtos.PaginationDto,BPMaster.Domains.Dtos.SortBankKeyDto)">
+            <summary>
+            This API is for page Bank Key: get all Bank Key
+            </summary>
+            <param name="keyword"></param>
+            <param name="paginationDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllBP(BPMaster.Domains.Dtos.SeachDto,BPMaster.Domains.Dtos.PaginationDto,BPMaster.Domains.Dtos.SortWorklistDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: get all bp
+            use for page worklist
+            The sorting is applied based on whether sortByCreatedDateAscending is true (ascending order) or false (descending order)
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPFirstStep(Domain.Dtos.CreateBPDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: create 1 bp
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.PutBP(Domain.Dtos.PutBPDto,System.String,System.Boolean)">
+            <summary>
+            for fe mock data or test
+            This API is for page create request: put bp, not use. copy of createRequestGeneralView
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createRequestGeneralView(Domain.Dtos.PutBPDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for general view
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createRequestGeneralView(Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)">
+            <summary>
+            This API is for importing Customer Vendor from excel form
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Controllers.v1.BPController.getRequestCreateStatus(System.String)" -->
+        <member name="M:Controllers.v1.BPController.createBpCompanyCodeData(Domain.Dtos.PutBPCompanyDataDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for Create Vendor Company Code Data
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createBpPurchasingData(Domain.Dtos.PutBPPurchasingDataDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for Create Vendor Purchasing data
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createBpCarrierRole(Domain.Dtos.PutBPCarrierRoleDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for Create Vendor Carrier Role
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllRequestForReport(Domain.Dtos.GetBPDto,BPMaster.Domains.Dtos.PaginationDto,System.String,BPMaster.Domains.Dtos.SortReportDto)">
+            <summary>
+            done
+            This API is for page worklist: get all request for report
+            use for page report
+            </summary>
+            <summary>
+            done
+            This API is for page worklist: get all request for report
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.ExportReportsToExcel(BPMaster.Domains.Dtos.ExportReportsToExcelDto)">
+            <summary>
+            Exports reports to Excel format.
+            </summary>
+            <param name="dto">Data transfer object containing the parameters needed for exporting reports to Excel.</param>
+            <returns>An IActionResult that contains the exported Excel file.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.ExportReportsDetailToExcel(BPMaster.Domains.Dtos.ExportDetailReportsToExcelDto)">
+            <summary>
+            Exports Datail reports to Excel format.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreatereviseBpGeneralView(Domain.Dtos.ReviseBPGeneralViewDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for general view revise custom
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBpGeneralInformation(System.String,System.Boolean)">
+            <summary>
+            Retrieves a list of revised BP requests based on the provided BP code.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPReviseCompanyCodeView(System.Guid)">
+            <summary>
+            Retrieves the company code view model for a specified BP code, 
+            which includes the Company Code and Reconciliation Account details.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createReviseCustomerSaleView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateReviseCustomerSaleViewDto)">
+            <summary>
+            Updates the customer sales view for a specified Business Partner (BP) code 
+            using the provided sales view details. This operation modifies existing sales-related
+            information such as sales district, customer group, pricing, shipping, and billing details.
+            If the <paramref name="isDraft"/> parameter is set to <c>true</c>, the changes are saved
+            as a draft, meaning that the status of the request will be set to "Draft".
+            If <paramref name="isDraft"/> is <c>false</c>, the changes are committed as a final update.
+            </summary>
+            
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPReviseCreditView(System.Guid)">
+            <summary>
+            Retrieves the credit view model for a specified Business Partner (BP) by its unique identifier (bpId). 
+            This operation returns detailed information related to the credit profile, such as rules, risk class, 
+            check rule, credit segment, and credit validity. 
+            
+            The response includes a <c>Limit</c> field that indicates the credit limit status:
+            - <c>true</c> means the credit limit is not defined.
+            - <c>false</c> means the credit limit is defined.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createReviseRequestApprover(BPMaster.Domains.Dtos.CreateReviseApproverDto,System.Boolean,System.Guid)">
+            <summary>
+            This API is for page create request: use for Create Revise Request Approver
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPReviseSalesAreaView(System.Guid)">
+            <summary>
+            done
+            This api is for create revise customer step 4.3: get sales area information by bpId
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetReviseVendorPurchasingData(System.Guid)">
+            <summary>
+            Retrieves the revised vendor purchasing data model for the given BP (Business Partner) ID.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetReviseVendorInformation(System.Guid)">
+            <summary>
+            Retrieves the revised for vendor request step 4.1: get type, tax number and full address
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateCustomerCompanyCodeView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateCompanyCodeViewDto)">
+            <summary>
+            Creates or updates the company code view for a given Business Partner (BP) ID.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateCustomerCreateCreditView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateCreditViewDto)">
+            <summary>
+            Creates or updates the credit view for a given Business Partner (BP) ID.
+            The response includes a <c>Limit</c> field that indicates the credit limit status:
+            - <c>true</c> means the credit limit is not defined.
+            - <c>false</c> means the credit limit is defined.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateCustomerSalesView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateSalesViewDto)">
+            <summary>
+            Creates or updates the Customer Sales View for the specified Business Partner (BP) ID.
+            This will update the sales information based on the provided data transfer object (DTO), 
+            while preserving the existing SalesDistrict. The status of the request is updated based on whether 
+            it is a draft or not.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendCompanyCodeView(System.Guid)">
+            <summary>
+            Retrieves the company code view model for a specified BP code, 
+            which includes the Company Code and Reconciliation Account details for extend vendor page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendCreditView(System.Guid)">
+            <summary>
+            Retrieves the credit view model for a specified Business Partner (BP) by its unique identifier (bpId). 
+            This operation returns detailed information related to the credit profile, such as rules, risk class, 
+            check rule, credit segment, and credit validity. 
+            
+            The response includes a <c>Limit</c> field that indicates the credit limit status:
+            - <c>true</c> means the credit limit is not defined.
+            - <c>false</c> means the credit limit is defined.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendGeneralInforView(System.Guid)">
+            <summary>
+            Retrieves the general information view for BP extend vendor page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendSaleDistrictView(System.Guid)">
+            <summary>
+            Retrieves the sale information view for BP extend vendor page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPExtendCustomerGeneralView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateCommunicationInformationGeneralViewDto)">
+            <summary>
+            Updates the BP Draft with customer general view information.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendCustomerGeneralView(System.Guid)">
+            <summary>
+            Retrieves the BP Draft with customer general view information.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateExtendCustomerSaleView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateSalesAreaDto)">
+            <summary>
+            Updates the customer sales view for a specified Business Partner (BP) code 
+            using the provided sales view details.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendCustomerSaleView(System.Guid)">
+            <summary>
+            Retrieves the BP Draft with customer Sale View.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateExtendCustomerPurchasingView(System.Guid,BPMaster.Domains.Dtos.CreatePurchasingViewDto,System.Boolean)">
+            <summary>
+            Updates the customer Purchasing View for a specified Business Partner (BP) code 
+            using the provided sales view details.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPExtendGeneralView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateBPCommunicationInformationGeneralDto)">
+            <summary>
+            Updates the BP Draft with extend vendor general view information.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPExtendPurchasingView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreatePurchasingExtendViewDto[])">
+            <summary>
+            Updates the BP extend vendor Purchasing View
+            using the provided purchasing view details.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPExtendSalesView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.ExtendSalesViewDto)">
+            <summary>
+            Creates or updates the BP extend vendor Sales View for the specified Business Partner (BP) ID.
+            This will update the sales information based on the provided data transfer object (DTO), 
+            while preserving the existing SalesDistrict. The status of the request is updated based on whether 
+            it is a draft or not.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendCustomerCompanyCodeView(System.Guid)">
+            <summary>
+            Retrieves the company code view model for a specified BP code, 
+            which includes the Company Code and Reconciliation Account details for extend customer page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendVendorPurchasingDataView(System.Guid)">
+            <summary>
+            Retrieves the purchasing data code model for a specified BP code
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBpReviseVendorAllInformationByCode(System.String)">
+            <summary>
+            Retrieves the revised BP vendor information based on the provided BP code.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="bpCode">The BP code to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBPExtendVendorCarrierRoleView(System.Guid)">
+            <summary>
+            Retrieves the value of carrier role for a specified BP code
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBpReviseCustomerAllInformationByCode(System.String)">
+            <summary>
+            Retrieves the revised BP customer information based on the provided BP code.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="bpCode">The BP code to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBpExtendVendorAllInformationByCode(System.String)">
+            <summary>
+            Retrieves the extend BP vendor information based on the provided BP code.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="bpCode">The BP code to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.DeleteBPByRequestID(System.String[])">
+            <summary>
+            Delete multiple requests by request id for requests page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateBPExtendVendorCarrierRoleView(System.Guid,System.Boolean,Domain.Dtos.PutBPCarrierRoleDto)">
+            <summary>
+            Creates or updates the BP extend vendor Carrier role view or the specified Business Partner (BP) ID.
+            This will update the sales information based on the provided data transfer object (DTO), 
+            while preserving the existing SalesDistrict. The status of the request is updated based on whether 
+            it is a draft or not.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetBpExtendCustomerAllInformationByCode(System.String)">
+            <summary>
+            Retrieves the extend BP customer information based on the provided BP code.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="bpCode">The BP code to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetReviseCustomerGeneralView(System.Guid)">
+            <summary>
+            Retrieves the General View model for a specified BP code, 
+            which includes the Company Code and Reconciliation Account details for customer vendor page
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.ReviseExtendBPFirstStep(Domain.Dtos.ReviseExtendBPDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: create 1 bp
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.getAutoFillReconciliationAccount(System.String)">
+            <summary>
+            done
+            This API is for page worklist: get all request for report
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GenerateRequest(Domain.Dtos.GenerateRequestDocNoDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: create 1 bp
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CheckCompanyCodeExist(System.String)">
+            <summary>
+            done
+            This API is check if company code exist, return true if company code exist, false is not exist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.DeleteDraftRequest(System.Guid)">
+            <summary>
+            done
+            This API is for page report: delete 1 draft request
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CreateCommentByRequestID(System.Guid,System.String)">
+            <summary>
+            This api is use for approver pages: post a comment by request id
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.DeleteCommentByRequestID(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            This api is use for approver pages: delete a comment by request id
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.ExportWorklist">
+            <summary>
+            Exports the selected worklist items to an Excel report.
+            This API allows the user to export multiple worklist items by their document numbers (Doc.No).
+            It also logs the user action for auditing purposes.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.CheckExistTaxNumber(System.String,System.Boolean)">
+            <summary>
+            Check if tax number is exist or not
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllCreateCustomerBPInformationForApprovers(System.Guid)">
+            <summary>
+            This api is for Create customer Approver
+            Retrieves the revised BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllReviveCustomerBPInformationForApprovers(System.Guid)">
+            <summary>
+            This api is for Revise customer Approver
+            Retrieves the revised BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllExtendCustomerBPInformationForApprovers(System.Guid)">
+            <summary>
+            This api is for Extend customer Approver
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllCreateVendorBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Create Vendor Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllReviseVendorBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Revise Vendor Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllExtendVendorBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Extend Vendor Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.TestDWH(System.String)">
+            <summary>
+            Check if tax number is exist or not
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetRequestType(System.Guid)">
+            <summary>
+            This bp is for Extend Vendor Approver pages
+            Retrieves the request
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GenerateRequestByBPCode(Domain.Dtos.GenerateRequestDocNoByBPCodeDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: create 1 bp
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Controllers.v1.BPController.GetAllDisabledBPInformationForApprovers(System.Guid)" -->
+        <member name="M:Controllers.v1.BPController.GetAllCreateEmployeeBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Create Employee Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllCreateShipToBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Create Ship To Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetAllCreateSalePartiesBPInformationForApprovers(System.Guid)">
+            <summary>
+            This bp is for Create Sale Partites Approver pages
+            Retrieves the extended BP customer information, including approvers, attachments, comment and history based on the provided request_id.
+            Throws a NotFoundException if the BP code doesn't exist or a NonAuthorizeException if the user is not authenticated.
+            </summary>
+            <param name="request_id">The request id to retrieve the revised vendor information for.</param>
+            <returns>Returns the revised BP vendor information for approver if found; otherwise, appropriate exceptions are thrown.</returns>
+        </member>
+        <member name="M:Controllers.v1.BPController.GetCommentsByRequestId(System.Guid)">
+            <summary>
+            This api is for all approver page: Get list of comment by request id
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.DisableBPFirstStep(Domain.Dtos.DisableBPDto,System.Boolean)">
+            <summary>
+            done
+            This API is for page worklist: create 1 bp
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.createReviseBpGeneralInformation(Domain.Dtos.PutBPGeneralInformationDto,System.String,System.Boolean)">
+            <summary>
+            done
+            This API is for page create request: use for general view
+            id is BpID in previous step
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.ExtendVendorCompanyCodeView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateCompanyCodeViewDto)">
+            <summary>
+            Creates or updates the company code view for a given Business Partner (BP) ID.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.ExtendVendorCreditView(System.Guid,System.Boolean,BPMaster.Domains.Dtos.CreateCreditViewDto)">
+            <summary>
+            Creates or updates the credit view for a given Business Partner (BP) ID.
+            The response includes a <c>Limit</c> field that indicates the credit limit status:
+            - <c>true</c> means the credit limit is not defined.
+            - <c>false</c> means the credit limit is defined.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.BPController.EnhanceGetBPExtendCustomerSaleView(System.Guid)">
+            <summary>
+            Retrieves the BP Draft with customer Sale View.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.DashBoardController.HomePageDashBoard(BPMaster.Domains.Dtos.EnhanceDashBoardPaginationDto,BPMaster.Domains.Dtos.SortDashboardUserDto)">
+            <summary>
+            This api is for homepage dashboard: return total of each request and list of request
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+            <exception cref="T:Common.Application.Exceptions.NonAuthenticateException"></exception>
+        </member>
+        <member name="M:Controllers.v1.EmailLogController.getAllEmailLogs(System.Guid)">
+            <summary>
+            This api is for email log page: get body of an email by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:Common.Application.Exceptions.NotFoundException"></exception>
+        </member>
+        <member name="M:Controllers.v1.EmailLogController.SendEmailCreateRequest(System.Guid)">
+            <summary>
+            This api is for testing send email with attachments
+            </summary>
+            <param name="request_id"></param>
+            <returns></returns>
+            <exception cref="T:Common.Application.Exceptions.BadRequestException"></exception>
+        </member>
+        <member name="M:Controllers.v1.FeatureController.CreateFeature(Domain.Dtos.CreateFeatureDto)">
+            <summary>
+            done
+            This API is for swagger page: Create 1 feature
+            use for page worklist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FeatureController.DeleteFeature(System.Guid)">
+            <summary>
+            done
+            This API is for swagger page: Delete 1 feature
+            use for page worklist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileController.ImportTradingPartner(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            done
+            This API is for page trading partner: import file create
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileController.ImportMasterData(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            done
+            This API is for page master data: import file create
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileUploadController.UploadRequestAttachment(Microsoft.AspNetCore.Http.IFormFile,System.Guid)">
+            <summary>
+            This API is for page request: upload attachment
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileUploadController.DeleteRequestFile(System.Guid)">
+            <summary>
+            This API is for page approver request: delete attachment using attachmentID
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileUploadController.GetAttachmentListByRequestId(System.Guid)">
+            <summary>
+            This API is for page approver request: get list attachment by request id
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.FileUploadController.UploadCommentAttachment(Microsoft.AspNetCore.Http.IFormFile,System.Guid)">
+            <summary>
+            This API is for page request: upload attachment for reuqest
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.RegisterUserAsync(Domain.Dtos.RegisterUserDto)">
+            <summary>
+            This API is for registering a new user
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.AuthenticateAsync(Domain.Dtos.LoginUserDto)">
+            <summary>
+            This API is for authenticating a user
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.GetAllUser(System.String)">
+            <summary>
+            Retrieves a list of all users, with optional filtering by keyword.
+            </summary>
+            <param name="keyword">Optional keyword to filter users by name, email, department, role, or status.</param>
+            <returns>A list of users matching the keyword, or all users if no keyword is provided.</returns>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.UpdateUserRole(System.Guid,BPMaster.Domains.Dtos.UpdateUserRoleDto)">
+            <summary>
+            Updates the role and status of a user.
+            </summary>
+            <param name="userId">The ID of the user to update.</param>
+            <param name="dto">The details for updating the user's role and status.</param>
+            <returns>The updated user role information.</returns>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.GetUserByRoleId(System.Guid)">
+            <summary>
+            Retrieves a list of users filtered by the specified role ID.
+            </summary>
+            <param name="roleId">The ID of the role to filter users by.</param>
+            <returns>A list of users associated with the specified role ID.</returns>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.AuthenticateWithAzureAsync(Domain.Dtos.LoginAzurePayloadDto)">
+            <summary>
+            This API is for authenticating a user
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.updateAllPassword">
+            <summary>
+            This API is for update all password
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.IdentityUsersController.CreateUser(BPMaster.Domains.Dtos.CreateUserRoleDto)">
+            <summary>
+            Updates the role and status of a user.
+            </summary>
+            <param name="dto">The details for updating the user's role and status.</param>
+            <returns>The updated user role information.</returns>
+        </member>
+        <member name="M:Controllers.v1.LayoutExportController.GetAllLayoutExport">
+            <summary>
+            This API is for swagger page: Get All Layout Export by CreatedId
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.LayoutExportController.CreateLayoutExport(Domains.Dtos.CreateLayoutExportDto)">
+            <summary>
+            This API is for swagger page: Create 1 layout Export
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.LayoutExportController.UpdateLayoutExport(System.Guid,Domains.Dtos.UpdateLayoutExportDto)">
+            <summary>
+            This API is for swagger page: Update 1 layout Export
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.LayoutExportController.DeleteLayoutExport(System.Guid)">
+            <summary>
+            This API is for swagger page: Delete 1 Layout Export
+            use for page report
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForCreateRequestStep1">
+            <summary>
+            done
+            This API is for page worklist: get all master data
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.getallmasterdataforcreaterequestgeneralview">
+            <summary>
+            done
+            This API is for create request: get all Country Key
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.getallmasterdataregion">
+            <summary>
+            done
+            This API is for create request: get all Region
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.getallmasterdatarPaymentTerms">
+            <summary>
+            done
+            This API is for create request: get all Payment Terms
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.getallmasterdatarPaymentMethod">
+            <summary>
+            done
+            This API is for create request: get all Payment Method
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForRequestType">
+            <summary>
+            done
+            This API is for page create request step 1: get all master data of request type
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForBPType">
+            <summary>
+            done
+            This API is for page create request step 1: get all master data of bp type
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataByNameAndCode(System.String,System.String)">
+            <summary>
+            done
+            This API is for get data in dropdown list: get all master data by name and code
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForSaleDistrict">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of sale district
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDatacustomergroup">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of customer group
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataSaleOffice">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of sale office
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataSaleGroup">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of sale group
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataCurrency">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of currency
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterExchangeRateType">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Exchange Rate Type
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterPriceGroup">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Exchange Price Group
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterCustPricProcedure">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Cust.Pric.Procedure
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDeliveryPriority">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Delivery Priority
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDeliveryPlant">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Delivering Plant
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterShippingConditions">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Shipping Conditions
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDateIncoterms">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Incoterms
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDatePaymentTerms">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Payment Terms
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataAcctAssmtGrpCust">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Acct Assmt Grp Cust.
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataOutputTax">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Output tax
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataCustomerGroup2">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of customer group 2
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataCustomerGroup3">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of customer group 3
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForSaleOrg">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Sale org
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForDistrchannel">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Distr Channel
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetAllMasterDataForDivision">
+            <summary>
+            done
+            This API is for page create request step 4.3: get all master data of Division
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.CreateMasterData(Domain.Dtos.CreateMasterDataDto,System.String)">
+            <summary>
+            This API is for page create MasterData or Update Master Data
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetMasterDataDefaults(BPMaster.Domains.Dtos.PaginationDto,System.String)">
+            <summary>
+            This API is for page Get Default MasterData
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.DeleteMasterData(System.String)">
+            <summary>
+            This API is for function Delete MasterData by Name
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.MasterDataController.GetMasterDataByName(System.String)">
+            <summary>
+            This API is for Get Master Data Detail By Name
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.NotificationController.GetNotificationForCurrentUser(System.Int32,System.Int32)">
+            <summary>
+            This api is for notification pop up: return notification for user, with data, pagination and unseen number
+            </summary>      
+        </member>
+        <member name="M:Controllers.v1.NotificationController.Updateseennotification(System.Guid)">
+            <summary>
+            This api is for notification pop up: update seen notification when user click a notification
+            </summary>      
+        </member>
+        <member name="M:Controllers.v1.NotificationController.DeleteNotification(System.Guid)">
+            <summary>
+            This api is for notification pop up: delete a notification by notification id and current user
+            </summary>      
+        </member>
+        <member name="M:Controllers.v1.NotificationController.GetConnectionId">
+            <summary>
+            This api is used for getting user's connectionId
+            </summary>      
+        </member>
+        <member name="M:Controllers.v1.NotificationController.TestPushNotification">
+            <summary>
+            This api is used for getting user's connectionId
+            </summary>      
+        </member>
+        <member name="M:Controllers.v1.RefactorTestController.testrefactorrequestold(System.Guid)">
+            <summary>
+            This API is for page trading partner: create 1 trading partner
+            </summary>
+            
+        </member>
+        <member name="M:Controllers.v1.RequestApprovalController.GetDefaultApproversByFlowcode(System.String)">
+            <summary>
+            done
+            This API is for all approval: get default approver for all bp type
+            use for page role
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RequestApprovalController.GetLoadProgressApproval(System.Guid)">
+            <summary>
+            This API is for request approval: get load progress approval
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RequestApprovalController.GetOMSToken">
+            <summary>
+            Retrieves oms token
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RoleController.GetAllRole(BPMaster.Domains.Dtos.PaginationDto,System.String,BPMaster.Domains.Dtos.SortRoleDto)">
+            <summary>
+            done
+            This API is for page role: get all role with number of user by role
+            use for page role
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RoleController.GetRoleById(System.Guid)">
+            <summary>
+            done
+            This API is for page role: get role by id
+            use for page role
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RoleController.CreateRole(Domain.Dtos.CreateRoleDto)">
+            <summary>
+            done
+            This API is for page role: Create 1 role
+            use for page worklist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RoleController.UpdateRole(Domain.Dtos.UpdateRoleDto,System.Guid)">
+            <summary>
+            done
+            This API is for page role: Update a role
+            use for page worklist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.RoleController.DeleteRole(System.Guid)">
+            <summary>
+            done
+            This API is for page role: Delete 1 role
+            use for page worklist
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.TradingPartnerController.#ctor(System.IServiceProvider,Services.IdentityUserService,Application.Settings.ApplicationSetting,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            This API is for page trading partner: create 1 trading partner
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.TradingPartnerController.ImportTradingPartner(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            done
+            This API is for page trading partner: import file create
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.TradingPartnerController.GetAllTradingPartner(System.String,BPMaster.Domains.Dtos.PaginationDto,BPMaster.Domains.Dtos.SortTradingPartnersDto)">
+            done
+        </member>
+        <member name="M:Controllers.v1.TradingPartnerController.validateImportFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            done
+            This API is for page trading partner: validate file before click import 
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.UserActionController.GetAllUserAction(BPMaster.Domains.Dtos.GetActionDto,BPMaster.Domains.Dtos.SortActionDto,System.Int32,System.Int32)">
+            <summary>
+            done
+            This API is for page activity log: get all user action
+            use for page role
+            </summary>
+        </member>
+        <member name="M:Controllers.v1.UserActionController.CreateActions(BPMaster.Domains.Dtos.CreateUserActionDto)">
+            <summary>
+            done
+            This API is for swagger testing page: create user actions
+            use for page role
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,48 @@
+2025-02-04 11:49:19 - Next run scheduled for: 2/5/2025 9:00:00 AM (UTC: 2/5/2025 9:00:00 AM)
+2025-02-04 11:49:19 - Calculated delay: 101440.1528247 seconds
+2025-02-04 11:52:59 - Next run scheduled for: 2/5/2025 9:00:00 AM (UTC: 2/5/2025 9:00:00 AM)
+2025-02-04 11:52:59 - Calculated delay: 101220.1585716 seconds
+2025-02-04 15:11:16 - Next run scheduled for: 2/5/2025 9:00:00 AM (UTC: 2/5/2025 9:00:00 AM)
+2025-02-04 15:11:16 - Calculated delay: 89323.6018375 seconds
+2025-02-04 15:12:26 - Next run scheduled for: 2/5/2025 9:00:00 AM (UTC: 2/5/2025 9:00:00 AM)
+2025-02-04 15:12:26 - Calculated delay: 89253.4842696 seconds
+2025-02-04 17:35:28 - Next run scheduled for: 2/5/2025 9:00:00 AM (UTC: 2/5/2025 9:00:00 AM)
+2025-02-04 17:35:28 - Calculated delay: 80671.7915347 seconds
+2025-02-05 09:31:15 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 09:31:15 - Calculated delay: 109724.4977719 seconds
+2025-02-05 09:33:20 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 09:33:20 - Calculated delay: 109599.2559431 seconds
+2025-02-05 09:41:13 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 09:41:13 - Calculated delay: 109126.0914851 seconds
+2025-02-05 10:55:31 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 10:55:31 - Calculated delay: 104668.504765 seconds
+2025-02-05 15:07:26 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 15:07:26 - Calculated delay: 89553.3603697 seconds
+2025-02-05 15:17:34 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 15:17:34 - Calculated delay: 88945.7692936 seconds
+2025-02-05 15:27:21 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 15:27:21 - Calculated delay: 88358.8834981 seconds
+2025-02-05 15:29:37 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 15:29:37 - Calculated delay: 88222.0679989 seconds
+2025-02-05 22:34:26 - Next run scheduled for: 2/6/2025 9:00:00 AM (UTC: 2/6/2025 9:00:00 AM)
+2025-02-05 22:34:26 - Calculated delay: 62733.2802394 seconds
+2025-02-06 12:04:19 - Next run scheduled for: 2/7/2025 9:00:00 AM (UTC: 2/7/2025 9:00:00 AM)
+2025-02-06 12:04:19 - Calculated delay: 100540.9845893 seconds
+2025-02-06 16:05:48 - Next run scheduled for: 2/7/2025 9:00:00 AM (UTC: 2/7/2025 9:00:00 AM)
+2025-02-06 16:05:48 - Calculated delay: 86051.163376 seconds
+2025-02-06 16:08:13 - Next run scheduled for: 2/7/2025 9:00:00 AM (UTC: 2/7/2025 9:00:00 AM)
+2025-02-06 16:08:13 - Calculated delay: 85906.1967442 seconds
+2025-02-07 10:28:47 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 10:28:47 - Calculated delay: 279072.1896983 seconds
+2025-02-07 10:44:07 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 10:44:07 - Calculated delay: 278152.359929 seconds
+2025-02-07 12:06:29 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 12:06:29 - Calculated delay: 273210.9272394 seconds
+2025-02-07 12:40:05 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 12:40:05 - Calculated delay: 271194.2118304 seconds
+2025-02-07 15:50:48 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 15:50:48 - Calculated delay: 259751.7867584 seconds
+2025-02-07 15:54:40 - Next run scheduled for: 2/10/2025 9:00:00 AM (UTC: 2/10/2025 9:00:00 AM)
+2025-02-07 15:54:40 - Calculated delay: 259519.0859755 seconds
+2025-02-10 09:48:55 - Next run scheduled for: 2/10/2025 9:50:00 AM (UTC: 2/10/2025 9:50:00 AM)
+2025-02-10 09:48:55 - Calculated delay: 64.5860873 seconds

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Work\MeU Solutions\Project\lsp-workflow-backend\BPMaster\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>False|2025-01-14T16:13:42.2124019Z||;True|2024-12-31T14:46:38.2940812+07:00||;True|2024-12-31T14:38:00.1408911+07:00||;True|2024-12-31T00:15:16.3215788+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

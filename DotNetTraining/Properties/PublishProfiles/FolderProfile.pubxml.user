@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-02-03T06:01:11.1533891Z||;True|2025-01-25T23:41:45.1931095+07:00||;True|2025-01-25T23:07:55.4475980+07:00||;True|2025-01-25T23:07:30.1706383+07:00||;True|2025-01-25T20:42:30.9559761+07:00||;True|2025-01-25T20:08:35.1327102+07:00||;True|2025-01-25T20:00:47.1953442+07:00||;True|2025-01-16T23:14:54.6108974+07:00||;True|2025-01-16T23:07:57.8326650+07:00||;True|2025-01-14T23:21:09.0074852+07:00||;True|2025-01-14T23:19:43.1859330+07:00||;True|2025-01-06T11:51:15.8637139+07:00||;True|2025-01-03T17:08:03.1358614+07:00||;True|2024-12-27T14:52:42.0812960+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Common/Application/Models/UserModel.cs">
+      <publishTime>02/17/2025 17:27:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
