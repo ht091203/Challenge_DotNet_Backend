@@ -8,10 +8,11 @@ namespace DotNetTraining.AutoMappers
     {
         public ProductProfile()
         {
-            CreateMap<ProductDto, Product>();
-            CreateMap<Product, ProductDto>();
-            CreateMap<CreateProductDto, Product>();
-            CreateMap<Product, CreateProductDto>();
+            CreateMap<ProductDto, Product>(); // dùng để nhận data
+            CreateMap<Product, ProductDto>(); // dùng để trả data
+            CreateMap<CreateProductDto, Product>(); // nhận data bên ngoài chuyển thành entity để thêm mới data
+            CreateMap<Product, CreateProductDto>(); // trả data ra ngoài che giấu data
+            CreateMap<UpdateProductDto, Product>();
         }
     }
 }

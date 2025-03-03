@@ -36,7 +36,7 @@ namespace Application
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<ApplicationSetting>(_builder.Configuration.GetSection("ApplicationSetting"));
-            
+
         }
     }
 }

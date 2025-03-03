@@ -930,3 +930,4 @@ C:\Users\ADMIN\Desktop\thực tập MEU\DotNetTraining\DotNetTraining\DotNetTrai
 C:\Users\ADMIN\Desktop\thực tập MEU\DotNetTraining\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.pdb
 C:\Users\ADMIN\Desktop\thực tập MEU\DotNetTraining\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\thực tập MEU\DotNetTraining\DotNetTraining\DotNetTraining\obj\Debug\net8.0\ref\DotNetTraining.dll
+C:\Users\ADMIN\Desktop\thực tập MEU\DotNetTraining\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.sourcelink.json

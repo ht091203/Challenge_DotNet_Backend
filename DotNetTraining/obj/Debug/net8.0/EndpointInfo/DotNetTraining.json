@@ -101,17 +101,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Product"
+                "$ref": "#/components/schemas/UpdateProductDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Product"
+                "$ref": "#/components/schemas/UpdateProductDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Product"
+                "$ref": "#/components/schemas/UpdateProductDto"
               }
             }
           }
@@ -285,17 +285,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             }
           }
@@ -421,13 +421,9 @@
         },
         "additionalProperties": false
       },
-      "Product": {
+      "UpdateProductDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -443,13 +439,9 @@
         },
         "additionalProperties": false
       },
-      "User": {
+      "UpdateUserDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
           "name": {
             "type": "string",
             "nullable": true

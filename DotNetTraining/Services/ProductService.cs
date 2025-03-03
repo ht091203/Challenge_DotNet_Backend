@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using Application.Settings;
+using AutoMapper;
 using Common.Application.CustomAttributes;
 using Common.Application.Exceptions;
 using Common.Services;
@@ -12,12 +13,20 @@ namespace DotNetTraining.Services
     [ScopedService]
     public class ProductService(IServiceProvider services, ApplicationSetting setting, IDbConnection connection) : BaseService(services)
     {
+
         private readonly ProductRepository _repo = new(connection);
 
-        public async Task<IEnumerable<Product>> GetAllProduct()
+        public async Task<IEnumerable<ProductDto>> GetAllProduct()
         {
-            var products = await _repo.GetAllProduct();
-            return products;
+            try
+            {
+                var products = await _repo.GetAllProduct();
+                return _mapper.Map<IEnumerable<ProductDto>>(products);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy danh sách sản phẩm", ex);
+            }
         }
 
         public async Task<ProductDto?> GetProductById(Guid productId)
@@ -35,7 +44,7 @@ namespace DotNetTraining.Services
             return dto;
         }
 
-        public async Task<Product?> UpdateProduct(Guid productId, Product product)
+        public async Task<ProductDto?> UpdateProduct(Guid productId, UpdateProductDto productDto)
         {
             var existingProduct = await _repo.GetProductById(productId);
             if (existingProduct == null)
@@ -43,11 +52,12 @@ namespace DotNetTraining.Services
                 return null; 
             }
 
-            existingProduct.Name = product.Name;
-            existingProduct.Price = product.Price;
-            existingProduct.Description = product.Description; 
+            // Cập nhật thông tin từ DTO
+            _mapper.Map(productDto, existingProduct);
 
-            return await _repo.UpdateProduct(existingProduct);
+            var updatedProduct = await _repo.UpdateProduct(existingProduct);
+
+            return _mapper.Map<ProductDto>(updatedProduct);
         }
 
         public async Task<bool> DeleteProduct(Guid productId)

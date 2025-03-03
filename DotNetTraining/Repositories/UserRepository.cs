@@ -2,6 +2,7 @@
 using BPMaster.Domains.Entities;
 using Common.Repositories;
 using Dapper;
+using Dapper.Contrib.Extensions;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DotNetTraining.Domains.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -59,7 +60,11 @@ namespace DotNetTraining.Repositories
             var sql = "INSERT INTO users (Id, Name, Email, Password) VALUES (@Id, @Name, @Email, @Password) RETURNING *";
             return await connection.QuerySingleOrDefaultAsync<User>(sql, user);
         }
-
+        //public async Task<User?> UpdateUserAsync(User user)
+        //{
+        //    bool isUpdated = await connection.UpdateAsync(user);
+        //    return isUpdated ? user : null;
+        //}
 
     }
 }

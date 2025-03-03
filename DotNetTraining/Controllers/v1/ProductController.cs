@@ -5,6 +5,7 @@ using Common.Controllers;
 using DotNetTraining.Domains.Dtos;
 using DotNetTraining.Domains.Entities;
 using DotNetTraining.Services;
+using iText.Commons.Actions.Data;
 using Microsoft.AspNetCore.Mvc;
 
 [Route("api/product")]
@@ -12,12 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 public class ProductController : BaseV1Controller<ProductService, ApplicationSetting>
 {
     private readonly ProductService _productService;
-    public ProductController(
-            IServiceProvider services,
-            IHttpContextAccessor httpContextAccessor
 
-            )
-            : base(services, httpContextAccessor)
+    public ProductController(IServiceProvider services, IHttpContextAccessor httpContextAccessor) : base(services, httpContextAccessor)
     {
         this._productService = services.GetService<ProductService>()!;
     }
@@ -25,16 +22,8 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
     [HttpGet("getAllProduct")]
     public async Task<IActionResult> GetAllProduct()
     {
-        try
-        {
-
-            var products = await _productService.GetAllProduct();
-            return Ok(products);
-        }
-        catch (Exception ex)
-        {
-            return Error(ex.Message);
-        }
+        var products = await _productService.GetAllProduct();
+        return Ok(products);
     }
 
     [HttpGet("{productId}")]
@@ -44,21 +33,13 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
     }
 
     [HttpPut("{productId}")]
-    public async Task<IActionResult> UpdateProduct(Guid productId, [FromBody] Product product)
+    public async Task<IActionResult> UpdateProduct(Guid productId, [FromBody] UpdateProductDto productdto)
     {
-        try
-        {
-            var updatedProduct = await _productService.UpdateProduct(productId, product);
-            if (updatedProduct == null)
-            {
-                return NotFound($"User with ID {productId} not found.");
-            }
-            return Ok(updatedProduct);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, "Internal Server Error: " + ex.Message);
-        }
+        var updatedProduct = await _productService.UpdateProduct(productId, productdto);
+
+        return updatedProduct is null
+            ? NotFound($"sản phẩm với ID {productId} không tìm thấy.")
+            : Ok(updatedProduct);
     }
 
     [HttpDelete("{productId}")]
@@ -69,9 +50,9 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
             var deleted = await _productService.DeleteProduct(productId);
             if (!deleted)
             {
-                return NotFound($"User with ID {productId} not found.");
+                return NotFound($"sản phẩm với ID {productId} không tìm thấy.");
             }
-            return Ok($"User with ID {productId} has been deleted successfully.");
+            return Ok($"sản phẩm với ID {productId} đã xóa thành công.");
         }
         catch (Exception ex)
         {
@@ -87,7 +68,7 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
             var createdProduct = await _productService.CreateProduct(newProduct);
             if (createdProduct == null)
             {
-                return BadRequest("Failed to create product.");
+                return BadRequest("thêm mới sản phẩm thất bại.");
             }
             return CreatedAtAction(nameof(GetProductById), new { productId = createdProduct.Id }, createdProduct);
         }
