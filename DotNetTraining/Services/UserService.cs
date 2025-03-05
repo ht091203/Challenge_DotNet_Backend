@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System.Data;
 using iText.Commons.Actions.Data;
 using DocumentFormat.OpenXml.Spreadsheet;
+using iText.Forms.Fields.Merging;
 
 namespace DotNetTraining.Services
 {
@@ -19,17 +20,13 @@ namespace DotNetTraining.Services
     {
         private readonly UserRepository _repo = new(connection);
 
-        public async Task<IEnumerable<UserDto>> GetAllUsers()
+        public async Task<List<UserDto>> GetAllUsers()
         {
-            try
-            {
-                var users = await _repo.GetAllUsers();
-                return _mapper.Map<IEnumerable<UserDto>>(users);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy danh sách người dùng", ex);
-            }
+            var users = await _repo.GetAllUsers();
+
+            var result = _mapper.Map<List<UserDto>>(users);
+
+            return result;
 
         }
 
@@ -47,38 +44,40 @@ namespace DotNetTraining.Services
 
         }
 
-        public async Task<UserDto?> UpdateUser(Guid userId, UpdateUserDto userDto)
+        public async Task<User?> UpdateUser(Guid userId, UserDto userDto)
         {
             var existingUser = await _repo.GetUserById(userId);
-            if (existingUser == null)
+            if (existingUser == null)   
             {
-                return null; // User không tồn tại
+                throw new Exception(" id not found"); // User không tồn tại
             }
-            // Cập nhật thông tin từ DTO
-            _mapper.Map(userDto, existingUser); 
+            
+            var user = _mapper.Map(userDto, existingUser); 
 
-            var updatedUser = await _repo.UpdateUser(existingUser);
-            return _mapper.Map<UserDto>(updatedUser);
+            var updatedUser = await _repo.UpdateUser(user);
+
+            return user;
         }
-        public async Task<bool> DeleteUser(Guid userId)
+        public async Task DeleteUser(Guid userId)
         {
             var existingUser = await _repo.GetUserById(userId);
+
             if (existingUser == null)
             {
-                return false; // User không tồn tại
+                throw new Exception("user not exist"); // User không tồn tại
             }
 
-            return await _repo.DeleteUser(userId);
+            await _repo.DeleteAsync(existingUser);
         }
 
-        public async Task<User?> CreateUser(CreateUserDto newUser)
+        public async Task<User?> CreateUser(UserDto newUser)
         {
 
             // Kiểm tra email đã tồn tại chưa
             var existingUser = await _repo.GetUserByEmail(newUser.Email);
             if (existingUser != null)
             {
-                return null; // Email đã tồn tại
+                throw new Exception("email đã tồn tại"); // Email đã tồn tại
             }
             // Tạo đối tượng User
             var user = new User
@@ -90,7 +89,7 @@ namespace DotNetTraining.Services
                 };
             
             // Gọi repository để lưu vào DB
-            return await _repo.CreateUser(user);
+            return await _repo.Create(user);
         }
 
     }

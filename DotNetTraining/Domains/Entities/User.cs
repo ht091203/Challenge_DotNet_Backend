@@ -1,13 +1,13 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Common.Domains.Entities;
+using Dapper.Contrib.Extensions;
 
 namespace DotNetTraining.Domains.Entities
 {
-    [Table("user")]
-    public class User
+    [Table("users")]
+    public class User : SystemLogEntity<Guid>
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; } 
-        public string Email { get; set; } 
+        public string Name { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
     }
 }

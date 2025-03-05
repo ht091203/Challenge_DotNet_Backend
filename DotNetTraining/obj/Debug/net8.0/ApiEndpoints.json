@@ -127,7 +127,7 @@
   },
   {
     "ContainingType": "UsersController",
-    "Method": "UpdateProduct",
+    "Method": "UpdateUser",
     "RelativePath": "api/users/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -140,7 +140,7 @@
       },
       {
         "Name": "userdto",
-        "Type": "DotNetTraining.Domains.Dtos.UpdateUserDto",
+        "Type": "DotNetTraining.Domains.Dtos.UserDto",
         "IsRequired": true
       },
       {
@@ -181,8 +181,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newUser",
-        "Type": "DotNetTraining.Domains.Dtos.CreateUserDto",
+        "Name": "dto",
+        "Type": "DotNetTraining.Domains.Dtos.UserDto",
         "IsRequired": true
       },
       {

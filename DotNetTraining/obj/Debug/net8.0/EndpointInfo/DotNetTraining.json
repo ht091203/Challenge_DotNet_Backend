@@ -285,17 +285,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             }
           }
@@ -360,17 +360,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserDto"
+                "$ref": "#/components/schemas/UserDto"
               }
             }
           }
@@ -403,24 +403,6 @@
         },
         "additionalProperties": false
       },
-      "CreateUserDto": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "UpdateProductDto": {
         "type": "object",
         "properties": {
@@ -439,7 +421,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateUserDto": {
+      "UserDto": {
         "type": "object",
         "properties": {
           "name": {

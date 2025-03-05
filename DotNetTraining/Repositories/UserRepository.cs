@@ -1,70 +1,55 @@
 ﻿using System.Data;
 using BPMaster.Domains.Entities;
+using Common.Databases;
 using Common.Repositories;
 using Dapper;
 using Dapper.Contrib.Extensions;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DotNetTraining.Domains.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNetTraining.Repositories
 {
     public class UserRepository(IDbConnection connection) : SimpleCrudRepository<User, Guid>(connection)
     {
-        public async Task<IEnumerable<User>> GetAllUsers()
+        public async Task<List<User>> GetAllUsers()
         {
-            try
-            {
-                var sql = "SELECT Name, Email FROM users";
-                return await connection.QueryAsync<User>(sql);
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-        }
-        public async Task<User?> GetUserById(Guid userId)
-        {
-            var sql = "SELECT * FROM users WHERE Id = @Id";
-            return await connection.QueryFirstOrDefaultAsync<User>(sql, new { Id = userId });
+            var sql = SqlCommandHelper.GetSelectSql<User>();
+            var result = await connection.QueryAsync<User>(sql);
+            return result.ToList();
         }
 
-        public async Task<User?> UpdateUser(User user)
+        public async Task<User?> GetUserById(Guid id)
         {
-            var sql = "UPDATE users SET Name = @Name, Email = @Email, Password = @Password WHERE Id = @Id RETURNING *";
-            return await connection.QueryFirstOrDefaultAsync<User>(sql, new
-            {
-                Id = user.Id,
-                Name = user.Name,
-                Email = user.Email,
-                Password = user.Password
-            });
-        }
+            var param = new { Id = id };
+            var sql = SqlCommandHelper.GetSelectSqlWithCondition<User>(new { Id = id });
+            return await GetOneByConditionAsync(sql, param);
 
-        public async Task<bool> DeleteUser(Guid userId)
-        {
-            var sql = "DELETE FROM users WHERE Id = @Id";
-            var rowsAffected = await connection.ExecuteAsync(sql, new { Id = userId });
-            return rowsAffected > 0;
         }
 
         public async Task<User?> GetUserByEmail(string email)
         {
-            var sql = "SELECT * FROM users WHERE Email = @Email";
-            return await connection.QueryFirstOrDefaultAsync<User>(sql, new { Email = email });
+            try
+            {
+                var sql = "SELECT * FROM users WHERE Email = @Email";
+                return await connection.QueryFirstOrDefaultAsync<User>(sql, new { Email = email });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error in GetUserByEmail: {e.Message}");
+                return null;
+            }
         }
 
-
-        public async Task<User?> CreateUser(User user)
+        public async Task<User?> Create(User user)
         {
-            var sql = "INSERT INTO users (Id, Name, Email, Password) VALUES (@Id, @Name, @Email, @Password) RETURNING *";
-            return await connection.QuerySingleOrDefaultAsync<User>(sql, user);
+            return await CreateAsync(user);
         }
-        //public async Task<User?> UpdateUserAsync(User user)
-        //{
-        //    bool isUpdated = await connection.UpdateAsync(user);
-        //    return isUpdated ? user : null;
-        //}
 
+        public async Task<User?> UpdateUser(User user)
+        {
+            return await UpdateAsync(user);
+        }
     }
 }

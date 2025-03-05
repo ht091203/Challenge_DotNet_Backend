@@ -20,64 +20,33 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     [HttpGet("getAllUsers")]
     public async Task<IActionResult> GetAllUsers()
     {
-            var users = await _userService.GetAllUsers();
-            return Ok(users);
-
+        var user = await _service.GetAllUsers();
+        return Success(user);
     }
 
     [HttpGet("{userId}")]
     public async Task<IActionResult> GetUserById(Guid userId)
     {
-            var user = await _userService.GetUserById(userId);
-            return Ok(user);
+        return Success (await _userService.GetUserById(userId));
     }
 
     [HttpPost("create")]
-    public async Task<IActionResult> CreateUser([FromBody] CreateUserDto newUser)
+    public async Task<IActionResult> CreateUser([FromBody] UserDto dto)
     {
-        try
-        {
-            var createdUser = await _userService.CreateUser(newUser);
-            if (createdUser == null)
-            {
-                return BadRequest("thêm mới sản phẩm thất bại.");
-            }
-
-            return CreatedAtAction(nameof(GetUserById), new { userId = createdUser.Id }, createdUser);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, "Internal Server Error: " + ex.Message);
-        }
-
+        return CreatedSuccess(await _service.CreateUser(dto));
     }
 
     [HttpPut("{userId}")]
-    public async Task<IActionResult> UpdateProduct(Guid userId, [FromBody] UpdateUserDto userdto)
+    public async Task<IActionResult> UpdateUser(Guid userId, [FromBody] UserDto userdto)
     {
-        var updatedUser = await _userService.UpdateUser(userId, userdto);
-
-        return updatedUser is null
-            ? NotFound($"người dùng với id {userId} không tìm thấy.")
-            : Ok(updatedUser);
+        return Success( await _userService.UpdateUser(userId, userdto) );
     }
 
     [HttpDelete("{userId}")]
     public async Task<IActionResult> DeleteUser(Guid userId)
     {
-        try
-        {
-            var deleted = await _userService.DeleteUser(userId);
-            if (!deleted)
-            {
-                return NotFound($"người dùng với id {userId} không tìm thấy.");
-            }
-            return Ok($"người dùng với id {userId} đã xóa thành công.");
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, "Internal Server Error: " + ex.Message);
-        }
+        await _userService.DeleteUser(userId);
+        return Success("delete Success");
     }
 
 
