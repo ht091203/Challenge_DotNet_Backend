@@ -11,6 +11,8 @@ using System.Data;
 using iText.Commons.Actions.Data;
 using DocumentFormat.OpenXml.Spreadsheet;
 using iText.Forms.Fields.Merging;
+using Org.BouncyCastle.Crypto.Generators;
+using Microsoft.AspNetCore.Identity;
 
 namespace DotNetTraining.Services
 {
@@ -67,7 +69,7 @@ namespace DotNetTraining.Services
                 throw new Exception("user not exist"); // User không tồn tại
             }
 
-            await _repo.DeleteAsync(existingUser);
+            await _repo.DeleteUser(existingUser);
         }
 
         public async Task<User?> CreateUser(UserDto newUser)
@@ -80,14 +82,12 @@ namespace DotNetTraining.Services
                 throw new Exception("email đã tồn tại"); // Email đã tồn tại
             }
             // Tạo đối tượng User
-            var user = new User
-                {
-                    Id = Guid.NewGuid(), // Tạo ID mới
-                    Name = newUser.Name,
-                    Email = newUser.Email,
-                    Password = newUser.Password,
-                };
-            
+            var user = _mapper.Map<User>(newUser);
+            //user.Id = Guid.NewGuid();
+
+            var hasher = new PasswordHasher<User>();
+            user.Password = hasher.HashPassword(user, newUser.Password);
+
             // Gọi repository để lưu vào DB
             return await _repo.Create(user);
         }

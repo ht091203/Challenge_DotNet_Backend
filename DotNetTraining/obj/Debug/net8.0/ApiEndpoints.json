@@ -22,32 +22,6 @@
   },
   {
     "ContainingType": "ProductController",
-    "Method": "UpdateProduct",
-    "RelativePath": "api/product/{productId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "productId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "productdto",
-        "Type": "DotNetTraining.Domains.Dtos.UpdateProductDto",
-        "IsRequired": true
-      },
-      {
-        "Name": "api-version",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ProductController",
     "Method": "DeleteProduct",
     "RelativePath": "api/product/{productId}",
     "HttpMethod": "DELETE",
@@ -69,6 +43,32 @@
   },
   {
     "ContainingType": "ProductController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/product/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "productdto",
+        "Type": "DotNetTraining.Domains.Dtos.ProductDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductController",
     "Method": "CreateProduct",
     "RelativePath": "api/product/create",
     "HttpMethod": "POST",
@@ -76,8 +76,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newProduct",
-        "Type": "DotNetTraining.Domains.Dtos.CreateProductDto",
+        "Name": "dto",
+        "Type": "DotNetTraining.Domains.Dtos.ProductDto",
         "IsRequired": true
       },
       {

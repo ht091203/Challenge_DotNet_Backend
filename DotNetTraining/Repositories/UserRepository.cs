@@ -51,5 +51,10 @@ namespace DotNetTraining.Repositories
         {
             return await UpdateAsync(user);
         }
+
+        public async Task DeleteUser(User user)
+        {
+            await DeleteAsync(user);
+        }
     }
 }

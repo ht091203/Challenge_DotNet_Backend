@@ -1,4 +1,4 @@
-CREATE TABLE "product"
+CREATE TABLE "products"
 (
     "Id" NVARCHAR(MAX) NOT NULL,
     "Name" NVARCHAR(MAX),
@@ -7,6 +7,6 @@ CREATE TABLE "product"
     "CreatedAt" NVARCHAR(MAX),
     "UpdatedAt" NVARCHAR(MAX),
     "Id" NVARCHAR(MAX),
-    CONSTRAINT "product_pkey" PRIMARY KEY ("Id")
+    CONSTRAINT "products_pkey" PRIMARY KEY ("Id")
 )
 

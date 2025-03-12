@@ -3,7 +3,7 @@ using Dapper.Contrib.Extensions;
 
 namespace DotNetTraining.Domains.Entities
 {
-    [Table("product")]
+    [Table("products")]
     public class Product : SystemLogEntity<Guid>
     {
         public string Name { get; set; }

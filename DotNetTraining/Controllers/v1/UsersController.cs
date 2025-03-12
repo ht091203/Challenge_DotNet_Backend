@@ -20,7 +20,7 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     [HttpGet("getAllUsers")]
     public async Task<IActionResult> GetAllUsers()
     {
-        var user = await _service.GetAllUsers();
+        var user = await _userService.GetAllUsers();
         return Success(user);
     }
 
@@ -33,6 +33,10 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     [HttpPost("create")]
     public async Task<IActionResult> CreateUser([FromBody] UserDto dto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState); 
+        }
         return CreatedSuccess(await _service.CreateUser(dto));
     }
 
@@ -48,12 +52,6 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
         await _userService.DeleteUser(userId);
         return Success("delete Success");
     }
-
-
-
-
-
-
 
 }
 

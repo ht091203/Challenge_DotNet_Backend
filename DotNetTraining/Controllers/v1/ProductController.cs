@@ -22,8 +22,8 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
     [HttpGet("getAllProduct")]
     public async Task<IActionResult> GetAllProduct()
     {
-        var products = await _productService.GetAllProduct();
-        return Ok(products);
+        var product = await _productService.GetAllProduct();
+        return Success(product);
     }
 
     [HttpGet("{productId}")]
@@ -32,51 +32,27 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
         return Success(await _productService.GetProductById(productId));
     }
 
-    [HttpPut("{productId}")]
-    public async Task<IActionResult> UpdateProduct(Guid productId, [FromBody] UpdateProductDto productdto)
+    [HttpPost("create")]
+    public async Task<IActionResult> CreateProduct([FromBody] ProductDto dto)
     {
-        var updatedProduct = await _productService.UpdateProduct(productId, productdto);
-
-        return updatedProduct is null
-            ? NotFound($"sản phẩm với ID {productId} không tìm thấy.")
-            : Ok(updatedProduct);
+        return CreatedSuccess(await _productService.CreateProduct(dto));
     }
 
     [HttpDelete("{productId}")]
     public async Task<IActionResult> DeleteProduct(Guid productId)
     {
-        try
-        {
-            var deleted = await _productService.DeleteProduct(productId);
-            if (!deleted)
-            {
-                return NotFound($"sản phẩm với ID {productId} không tìm thấy.");
-            }
-            return Ok($"sản phẩm với ID {productId} đã xóa thành công.");
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, "Internal Server Error: " + ex.Message);
-        }
+
+        await _productService.DeleteProduct(productId);
+        return Success("Delete Success");
     }
 
-    [HttpPost("create")]
-    public async Task<IActionResult> CreateProduct([FromBody] CreateProductDto newProduct)
+    [HttpPut("{productId}")]
+    public async Task<IActionResult> UpdateProduct(Guid productId, [FromBody] ProductDto productdto)
     {
-        try
-        {
-            var createdProduct = await _productService.CreateProduct(newProduct);
-            if (createdProduct == null)
-            {
-                return BadRequest("thêm mới sản phẩm thất bại.");
-            }
-            return CreatedAtAction(nameof(GetProductById), new { productId = createdProduct.Id }, createdProduct);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, "Internal Server Error: " + ex.Message);
-        }
+        return Success(await _productService.UpdateProduct(productId, productdto));
     }
+
+
 }
 
 

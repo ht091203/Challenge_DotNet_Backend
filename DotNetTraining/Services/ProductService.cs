@@ -16,22 +16,16 @@ namespace DotNetTraining.Services
 
         private readonly ProductRepository _repo = new(connection);
 
-        public async Task<IEnumerable<ProductDto>> GetAllProduct()
+        public async Task<List<ProductDto>> GetAllProduct()
         {
-            try
-            {
-                var products = await _repo.GetAllProduct();
-                return _mapper.Map<IEnumerable<ProductDto>>(products);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy danh sách sản phẩm", ex);
-            }
+            var products = await _repo.GetAllProduct();
+            var result = _mapper.Map<List<ProductDto>>(products);
+            return result;
+
         }
 
         public async Task<ProductDto?> GetProductById(Guid productId)
         {
-            //entity
             var existingProduct = await _repo.GetProductById(productId);
 
             if(existingProduct == null)
@@ -44,50 +38,37 @@ namespace DotNetTraining.Services
             return dto;
         }
 
-        public async Task<ProductDto?> UpdateProduct(Guid productId, UpdateProductDto productDto)
+        public async Task<Product?> UpdateProduct(Guid productId,ProductDto productDto)
         {
             var existingProduct = await _repo.GetProductById(productId);
             if (existingProduct == null)
             {
-                return null; 
+                throw new Exception(" id not found");
             }
 
             // Cập nhật thông tin từ DTO
-            _mapper.Map(productDto, existingProduct);
+            var product = _mapper.Map(productDto, existingProduct);
 
-            var updatedProduct = await _repo.UpdateProduct(existingProduct);
+            var updatedProduct = await _repo.UpdateProduct(product);
 
-            return _mapper.Map<ProductDto>(updatedProduct);
+            return product;
         }
 
-        public async Task<bool> DeleteProduct(Guid productId)
+        public async Task DeleteProduct(Guid productId)
         {
-            var existingUser = await _repo.GetProductById(productId);
-            if (existingUser == null)
+            var existingProduct = await _repo.GetProductById(productId);
+            if (existingProduct == null)
             {
-                return false; // product không tồn tại
+                throw new Exception("Product not exist");
             }
 
-            return await _repo.DeleteProduct(productId);
+            await _repo.DeleteProduct(existingProduct);
         }
 
-        public async Task<Product?> CreateProduct(CreateProductDto newProduct)
+        public async Task<Product?> CreateProduct(ProductDto newProduct)
         {
-            // Kiểm tra email đã tồn tại chưa
-            var existingUser = await _repo.GetProductByName(newProduct.Name);
-            if (existingUser != null)
-            {
-                return null; // Email đã tồn tại
-            }
-
-            // Tạo đối tượng User
-            var product = new Product
-            {
-                Id = Guid.NewGuid(), // Tạo ID mới
-                Name = newProduct.Name,
-                Price = newProduct.Price,
-                Description = newProduct.Description
-            };
+            var product = _mapper.Map<Product>(newProduct);
+            product.Id = Guid.NewGuid();
 
             // Gọi repository để lưu vào DB
             return await _repo.CreateProduct(product);
