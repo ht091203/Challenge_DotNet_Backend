@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange3\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange3\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj",
         "packagesPath": "C:\\Users\\ht0912\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange3\\DotNetTraining\\DotNetTraining\\obj\\",
+=======
+    "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj",
+        "projectName": "DotNetTraining",
+        "projectPath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj",
+        "packagesPath": "C:\\Users\\ht0912\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\obj\\",
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

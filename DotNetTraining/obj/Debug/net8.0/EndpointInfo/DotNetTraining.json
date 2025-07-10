@@ -14,7 +14,11 @@
     "version": "1.0"
   },
   "paths": {
+<<<<<<< HEAD
     "/api/categories/getallcategory": {
+=======
+    "/api/categories": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
       "get": {
         "tags": [
           "Category"
@@ -36,142 +40,12 @@
             "description": "Success"
           }
         }
+<<<<<<< HEAD
       }
     },
     "/api/categories/{categoryId}": {
-      "get": {
-        "tags": [
-          "Category"
-        ],
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "query",
-            "description": "The requested API version",
-            "style": "form",
-            "schema": {
-              "type": "string",
-              "default": "1.0"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
+=======
       },
-      "put": {
-        "tags": [
-          "Category"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "query",
-            "description": "The requested API version",
-            "style": "form",
-            "schema": {
-              "type": "string",
-              "default": "1.0"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Category"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "api-version",
-            "in": "query",
-            "description": "The requested API version",
-            "style": "form",
-            "schema": {
-              "type": "string",
-              "default": "1.0"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/categories/createcategory": {
       "post": {
         "tags": [
           "Category"
@@ -214,13 +88,256 @@
         }
       }
     },
-    "/api/orders/getallorder": {
+    "/api/categories/{id}": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+<<<<<<< HEAD
+            "name": "categoryId",
+=======
+            "name": "id",
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+<<<<<<< HEAD
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "categoryId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+<<<<<<< HEAD
+              "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+<<<<<<< HEAD
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "categoryId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+<<<<<<< HEAD
+              "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+<<<<<<< HEAD
+    "/api/categories/createcategory": {
+      "post": {
+        "tags": [
+          "Category"
+=======
+    "/api/orders": {
       "get": {
         "tags": [
           "Order"
         ],
         "parameters": [
           {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Order"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/CategoryDto"
+=======
+                "$ref": "#/components/schemas/OrderDto"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+              }
+            },
+            "text/json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/CategoryDto"
+=======
+                "$ref": "#/components/schemas/OrderDto"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+              }
+            },
+            "application/*+json": {
+              "schema": {
+<<<<<<< HEAD
+                "$ref": "#/components/schemas/CategoryDto"
+=======
+                "$ref": "#/components/schemas/OrderDto"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+<<<<<<< HEAD
+    "/api/orders/getallorder": {
+=======
+    "/api/orders/{id}": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+<<<<<<< HEAD
             "name": "api-version",
             "in": "query",
             "description": "The requested API version",
@@ -246,6 +363,9 @@
         "parameters": [
           {
             "name": "orderId",
+=======
+            "name": "id",
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "in": "path",
             "required": true,
             "style": "simple",
@@ -278,6 +398,7 @@
         "parameters": [
           {
             "name": "id",
+<<<<<<< HEAD
             "in": "query",
             "style": "form",
             "schema": {
@@ -287,11 +408,18 @@
           },
           {
             "name": "orderId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "in": "path",
             "required": true,
             "style": "simple",
             "schema": {
+<<<<<<< HEAD
               "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             }
           },
           {
@@ -337,14 +465,21 @@
         "parameters": [
           {
             "name": "id",
+<<<<<<< HEAD
             "in": "query",
             "style": "form",
+=======
+            "in": "path",
+            "required": true,
+            "style": "simple",
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "schema": {
               "type": "string",
               "format": "uuid"
             }
           },
           {
+<<<<<<< HEAD
             "name": "orderId",
             "in": "path",
             "required": true,
@@ -354,6 +489,8 @@
             }
           },
           {
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "name": "api-version",
             "in": "query",
             "description": "The requested API version",
@@ -371,6 +508,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/orders/{createOrder}": {
       "post": {
         "tags": [
@@ -423,6 +561,8 @@
         }
       }
     },
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
     "/api/order-items/order/{orderId}": {
       "get": {
         "tags": [
@@ -457,7 +597,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/order-items/{orderItemId}": {
+=======
+    "/api/order-items/{id}": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
       "get": {
         "tags": [
           "OrderItem"
@@ -465,6 +609,7 @@
         "parameters": [
           {
             "name": "id",
+<<<<<<< HEAD
             "in": "query",
             "style": "form",
             "schema": {
@@ -474,11 +619,18 @@
           },
           {
             "name": "orderItemId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "in": "path",
             "required": true,
             "style": "simple",
             "schema": {
+<<<<<<< HEAD
               "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             }
           },
           {
@@ -505,6 +657,7 @@
         "parameters": [
           {
             "name": "id",
+<<<<<<< HEAD
             "in": "query",
             "style": "form",
             "schema": {
@@ -514,11 +667,18 @@
           },
           {
             "name": "orderItemId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "in": "path",
             "required": true,
             "style": "simple",
             "schema": {
+<<<<<<< HEAD
               "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             }
           },
           {
@@ -564,6 +724,7 @@
         "parameters": [
           {
             "name": "id",
+<<<<<<< HEAD
             "in": "query",
             "style": "form",
             "schema": {
@@ -573,11 +734,18 @@
           },
           {
             "name": "orderItemId",
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "in": "path",
             "required": true,
             "style": "simple",
             "schema": {
+<<<<<<< HEAD
               "type": "string"
+=======
+              "type": "string",
+              "format": "uuid"
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             }
           },
           {
@@ -598,13 +766,18 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/order-items/{createOrderItem}": {
+=======
+    "/api/order-items": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
       "post": {
         "tags": [
           "OrderItem"
         ],
         "parameters": [
           {
+<<<<<<< HEAD
             "name": "createOrderItem",
             "in": "path",
             "required": true,
@@ -614,6 +787,8 @@
             }
           },
           {
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "name": "api-version",
             "in": "query",
             "description": "The requested API version",
@@ -825,7 +1000,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/product/createproduct": {
+=======
+    "/api/product/create": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
       "post": {
         "tags": [
           "Product"
@@ -1056,9 +1235,78 @@
   "components": {
     "schemas": {
       "CategoryDto": {
+<<<<<<< HEAD
         "required": [
           "name"
         ],
+=======
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "orderId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductDto": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
         "type": "object",
         "properties": {
           "id": {
@@ -1168,6 +1416,11 @@
           "categoryId": {
             "type": "string",
             "nullable": true
+          },
+          "categoryId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1181,6 +1434,14 @@
         "type": "object",
         "properties": {
           "id": {
+<<<<<<< HEAD
+=======
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "name": {
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             "type": "string",
             "format": "uuid",
             "nullable": true

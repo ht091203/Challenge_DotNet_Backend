@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "+7tAqQRab9w=",
   "success": true,
   "projectFilePath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange3\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj",
+=======
+  "dgSpecHash": "8ogc0CUgQ/Q=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ht0912\\Desktop\\ThucTap\\Tuan2\\Challange2\\DotNetTraining\\DotNetTraining\\DotNetTraining.csproj",
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
   "expectedPackageFiles": [
     "C:\\Users\\ht0912\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\ht0912\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

@@ -24,10 +24,13 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     public async Task<IActionResult> GetAllUsers()
     {
         var users = await _userService.GetAllUsers();
+<<<<<<< HEAD
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
         return Success(users);
     }
 
@@ -35,6 +38,7 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     [HttpGet("{userId}")]
     public async Task<IActionResult> GetUserById(Guid userId)
     {
+<<<<<<< HEAD
         var user = await _userService.GetUserById(userId);
         if (user == null)
         {
@@ -45,6 +49,13 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
 
     // POST: api/users/create
     [HttpPost("createUser")]
+=======
+        return Success(await _userService.GetUserById(userId));
+    }
+
+    // POST: api/users/create
+    [HttpPost("create")]
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
     public async Task<IActionResult> CreateUser([FromBody] UserDto dto)
     {
         if (!ModelState.IsValid)
@@ -52,8 +63,12 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
             return BadRequest(ModelState);
         }
 
+<<<<<<< HEAD
         var result = await _service.CreateUser(dto);
         return CreatedSuccess(result);
+=======
+        return CreatedSuccess(await _userService.CreateUser(dto));
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
     }
 
     // PUT: api/users/{userId}
@@ -73,10 +88,13 @@ public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
     public async Task<IActionResult> DeleteUser(Guid userId)
     {
         await _userService.DeleteUser(userId);
+<<<<<<< HEAD
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
         return Success("Delete success");
     }
 }

@@ -42,10 +42,13 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
     [HttpGet("category/{categoryId}")]
     public async Task<IActionResult> GetByCategory(Guid categoryId)
     {
+<<<<<<< HEAD
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
         return Success(await _service.GetByCategoryId(categoryId));
     }
 

@@ -15,7 +15,11 @@ namespace DotNetTraining.Domains.Dtos
 
         [StringLength(1000, ErrorMessage = "Mô tả tối đa 1000 ký tự")]
         public string Description { get; set; }
+<<<<<<< HEAD
 
         public string CategoryId { get; set; }
+=======
+        public Guid? CategoryId { get; set; }
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
     }
 }

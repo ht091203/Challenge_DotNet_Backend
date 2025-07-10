@@ -18,6 +18,7 @@ namespace DotNetTraining.Controllers.v1
         public async Task<IActionResult> GetByOrderId(Guid orderId)
             => Success(await _service.GetByOrderId(orderId));
 
+<<<<<<< HEAD
         [HttpGet("{orderItemId}")]
         public async Task<IActionResult> GetOrderItemById(Guid id)
             => Success(await _service.GetOrderItemById(id));
@@ -47,5 +48,25 @@ namespace DotNetTraining.Controllers.v1
             return Success("Deleted");
         }
 
+=======
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+            => Success(await _service.GetById(id));
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] OrderItemDto dto)
+            => CreatedSuccess(await _service.Create(dto));
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] OrderItemDto dto)
+            => Success(await _service.Update(id, dto));
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _service.Delete(id);
+            return Success("Deleted");
+        }
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
     }
 }

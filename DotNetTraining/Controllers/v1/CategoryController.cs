@@ -14,6 +14,7 @@ namespace DotNetTraining.Controllers.v1
         public CategoryController(IServiceProvider services, IHttpContextAccessor accessor) : base(services, accessor)
             => _service = services.GetService<CategoryService>()!;
 
+<<<<<<< HEAD
         [HttpGet("getAllCategory")]
         public async Task<IActionResult> GetAllCategories()
         {
@@ -58,6 +59,26 @@ namespace DotNetTraining.Controllers.v1
         public async Task<IActionResult> DeleteCategories(Guid id)
         {
             await _service.DeleteCategories(id);
+=======
+        [HttpGet]
+        public async Task<IActionResult> GetAll() => Success(await _service.GetAll());
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id) => Success(await _service.GetById(id));
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CategoryDto dto)
+            => CreatedSuccess(await _service.Create(dto));
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] CategoryDto dto)
+            => Success(await _service.Update(id, dto));
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _service.Delete(id);
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
             return Success("Deleted");
         }
     }

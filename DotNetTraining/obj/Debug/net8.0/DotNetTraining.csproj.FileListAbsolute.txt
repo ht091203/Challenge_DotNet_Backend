@@ -1414,6 +1414,7 @@ C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange2\DotNetTraining\DotNetTraining\o
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange2\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTr.D954D7D5.Up2Date
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange2\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.genruntimeconfig.cache
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange2\DotNetTraining\DotNetTraining\obj\Debug\net8.0\ref\DotNetTraining.dll
+<<<<<<< HEAD
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\bin\Debug\net8.0\appsettings.json
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\bin\Debug\net8.0\DotNetTraining.staticwebassets.endpoints.json
@@ -1576,3 +1577,5 @@ C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\o
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.pdb
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\obj\Debug\net8.0\DotNetTraining.genruntimeconfig.cache
 C:\Users\ht0912\Desktop\ThucTap\Tuan2\Challange3\DotNetTraining\DotNetTraining\obj\Debug\net8.0\ref\DotNetTraining.dll
+=======
+>>>>>>> d9e5241c542531088d3b70cd4b4149e8b78c996e
