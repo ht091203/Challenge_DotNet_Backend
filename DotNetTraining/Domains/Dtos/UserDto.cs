@@ -4,6 +4,7 @@ namespace DotNetTraining.Domains.Dtos
 {
     public class UserDto
     {
+        public Guid? Id { get; set; }
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Email không được để trống")]

@@ -12,47 +12,57 @@ using Microsoft.AspNetCore.Mvc;
 public class UsersController : BaseV1Controller<UserService, ApplicationSetting>
 {
     private readonly UserService _userService;
-    public UsersController(IServiceProvider services, IHttpContextAccessor httpContextAccessor): base(services, httpContextAccessor)
+
+    public UsersController(IServiceProvider services, IHttpContextAccessor httpContextAccessor)
+        : base(services, httpContextAccessor)
     {
-        this._userService = services.GetService<UserService>()!;
+        _userService = services.GetService<UserService>()!;
     }
 
+    // GET: api/users/getAllUsers
     [HttpGet("getAllUsers")]
     public async Task<IActionResult> GetAllUsers()
     {
-        var user = await _userService.GetAllUsers();
-        return Success(user);
+        var users = await _userService.GetAllUsers();
+        return Success(users);
     }
 
+    // GET: api/users/{userId}
     [HttpGet("{userId}")]
     public async Task<IActionResult> GetUserById(Guid userId)
     {
-        return Success (await _userService.GetUserById(userId));
+        return Success(await _userService.GetUserById(userId));
     }
 
+    // POST: api/users/create
     [HttpPost("create")]
     public async Task<IActionResult> CreateUser([FromBody] UserDto dto)
     {
         if (!ModelState.IsValid)
         {
-            return BadRequest(ModelState); 
+            return BadRequest(ModelState);
         }
-        return CreatedSuccess(await _service.CreateUser(dto));
+
+        return CreatedSuccess(await _userService.CreateUser(dto));
     }
 
+    // PUT: api/users/{userId}
     [HttpPut("{userId}")]
-    public async Task<IActionResult> UpdateUser(Guid userId, [FromBody] UserDto userdto)
+    public async Task<IActionResult> UpdateUser(Guid userId, [FromBody] UserDto dto)
     {
-        return Success( await _userService.UpdateUser(userId, userdto) );
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        return Success(await _userService.UpdateUser(userId, dto));
     }
 
+    // DELETE: api/users/{userId}
     [HttpDelete("{userId}")]
     public async Task<IActionResult> DeleteUser(Guid userId)
     {
         await _userService.DeleteUser(userId);
-        return Success("delete Success");
+        return Success("Delete success");
     }
-
 }
-
-

@@ -4,6 +4,7 @@ using AutoMapper;
 using Common.Application.CustomAttributes;
 using Common.Services;
 using DotNetTraining.Domains.Dtos;
+using DotNetTraining.Domains.Models;
 using DotNetTraining.Domains.Entities;
 using DotNetTraining.Repositories;
 using Newtonsoft.Json;
@@ -13,7 +14,6 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using iText.Forms.Fields.Merging;
 using Org.BouncyCastle.Crypto.Generators;
 using Microsoft.AspNetCore.Identity;
-
 namespace DotNetTraining.Services
 {
   
@@ -22,17 +22,17 @@ namespace DotNetTraining.Services
     {
         private readonly UserRepository _repo = new(connection);
 
-        public async Task<List<UserDto>> GetAllUsers()
+        public async Task<List<UserModel>> GetAllUsers()
         {
             var users = await _repo.GetAllUsers();
 
-            var result = _mapper.Map<List<UserDto>>(users);
+            var result = _mapper.Map<List<UserModel>>(users);
 
             return result;
 
         }
 
-        public async Task<UserDto?> GetUserById(Guid userId)
+        public async Task<UserModel?> GetUserById(Guid userId)
         {
             var existingUser = await _repo.GetUserById(userId);
             if (existingUser == null)
@@ -40,7 +40,7 @@ namespace DotNetTraining.Services
                 throw new Exception("user not exist");
             }
             // map entity to Dto
-            var dto = _mapper.Map<UserDto>(existingUser);
+            var dto = _mapper.Map<UserModel>(existingUser);
 
             return dto;
 

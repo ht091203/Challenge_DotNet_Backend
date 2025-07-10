@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "AWuRdQ5RR0lnFADZrA1l7vwxImEDSAS9ib0Emp6QtlE=",
-  "Source": "DotNetTraining",
-  "BasePath": "_content/DotNetTraining",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"AWuRdQ5RR0lnFADZrA1l7vwxImEDSAS9ib0Emp6QtlE=","Source":"DotNetTraining","BasePath":"_content/DotNetTraining","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
