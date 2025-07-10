@@ -37,6 +37,11 @@ namespace DotNetTraining.Services
             
             return dto;
         }
+        public async Task<List<ProductDto>> GetByCategoryId(Guid categoryId)
+        {
+            var products = await _repo.GetByCategoryId(categoryId);
+            return _mapper.Map<List<ProductDto>>(products);
+        }
 
         public async Task<Product?> UpdateProduct(Guid productId,ProductDto productDto)
         {

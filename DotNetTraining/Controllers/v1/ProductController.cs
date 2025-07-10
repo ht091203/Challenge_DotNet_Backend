@@ -31,6 +31,11 @@ public class ProductController : BaseV1Controller<ProductService, ApplicationSet
     {
         return Success(await _productService.GetProductById(productId));
     }
+    [HttpGet("category/{categoryId}")]
+    public async Task<IActionResult> GetByCategory(Guid categoryId)
+    {
+        return Success(await _service.GetByCategoryId(categoryId));
+    }
 
     [HttpPost("create")]
     public async Task<IActionResult> CreateProduct([FromBody] ProductDto dto)
