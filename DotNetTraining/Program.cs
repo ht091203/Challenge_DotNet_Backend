@@ -1,5 +1,17 @@
+<<<<<<< Updated upstream
 ﻿using System.Reflection;
 using Application;
+=======
+﻿using Application;
+using Application.Settings;
+using Asp.Versioning.ApiExplorer;
+using Common.Application.Configurations;
+using Common.Application.Settings;
+using Common.Loggers.Interfaces;
+using Common.Loggers.SeriLog;
+//using DotNetTraining.Application.Settings;y
+
+>>>>>>> Stashed changes
 using DotNetTraining.AutoMappers;
 using DotNetTraining.Repositories;
 using DotNetTraining.Services;

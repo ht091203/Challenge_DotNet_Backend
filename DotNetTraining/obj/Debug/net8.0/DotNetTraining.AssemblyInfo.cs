@@ -15,7 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetTraining")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b76bdcb437b0b29e4c684527f725641b87958a4d")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7070a4e4b54d8d8839c5d28ce85fed586c958960")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetTraining")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetTraining")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
