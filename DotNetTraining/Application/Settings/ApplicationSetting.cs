@@ -8,6 +8,7 @@ namespace Application.Settings
         public PasswordSetting PasswordSetting { get; set; } = new();
         public override BasePermissionSetting PermissionSetting { get => new PermissionSetting(); }
         public string AuthToken { get; set; }
+        //public JwtTokenSetting JwtTokenSetting { get; set; } = new();
     }
 
 

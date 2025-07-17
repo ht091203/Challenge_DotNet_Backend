@@ -1,0 +1,300 @@
+2025-07-17 12:32:17.304 +07:00 [INF] [ STARTUP ] - 🔧 Starting additional configuration...
+2025-07-17 12:32:17.755 +07:00 [INF] [ STARTUP ] - ✅ Authentication and authorization configured.
+2025-07-17 14:31:26.189 +07:00 [INF] [ STARTUP ] - 🔧 Starting additional configuration...
+2025-07-17 14:31:26.353 +07:00 [INF] [ STARTUP ] - ✅ Authentication and authorization configured.
+2025-07-17 14:31:27.190 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-07-17 14:31:27.250 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-07-17 14:36:01.202 +07:00 [INF] [ STARTUP ] - 🔧 Starting additional configuration...
+2025-07-17 14:36:01.239 +07:00 [INF] [ STARTUP ] - ✅ Authentication and authorization configured.
+2025-07-17 14:37:04.715 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:37:05.638 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user123@example.com
+2025-07-17 14:37:06.072 +07:00 [ERR] [ AUTH ] - Register error for: user123@example.com
+Npgsql.PostgresException (0x80004005): 42703: column "PasswordHash" of relation "users" does not exist
+
+POSITION: 37
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at PostgresAdapter.InsertAsync(IDbConnection connection, IDbTransaction transaction, Nullable`1 commandTimeout, String tableName, String columnList, String parameterList, IEnumerable`1 keyProperties, Object entityToInsert) in /_/Dapper.Contrib/SqlMapperExtensions.Async.cs:line 500
+   at Common.Repositories.SimpleCrudRepository`2.CreateAsync(T entity) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Common\Repositories\SimpleCrudRepository.cs:line 15
+   at DotNetTraining.Repositories.UserRepository.Create(User user) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 49
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 113
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "PasswordHash" of relation "users" does not exist
+    Position: 37
+    File: parse_target.c
+    Line: 1070
+    Routine: checkInsertTargets
+2025-07-17 14:37:48.749 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user123@example.com
+2025-07-17 14:37:48.898 +07:00 [INF] [ AUTH ] - Register success: user123@example.com
+2025-07-17 14:38:09.811 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user123@example.com
+2025-07-17 14:38:10.113 +07:00 [ERR] [ AUTH ] - Login error for: user123@example.com
+Npgsql.PostgresException (0x80004005): 42P01: relation "user_roles" does not exist
+
+POSITION: 71
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at DotNetTraining.Repositories.UserRepository.GetUserRoles(Guid userId) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 68
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 138
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "user_roles" does not exist
+    Position: 71
+    File: parse_relation.c
+    Line: 1452
+    Routine: parserOpenTable
+2025-07-17 14:39:32.579 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:39:33.072 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user111@example.com
+2025-07-17 14:39:33.416 +07:00 [INF] [ AUTH ] - Register success: user111@example.com
+2025-07-17 14:39:43.168 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user111@example.com
+2025-07-17 14:39:43.467 +07:00 [ERR] [ AUTH ] - Login error for: user111@example.com
+Npgsql.PostgresException (0x80004005): 42703: column ur.roleid does not exist
+
+POSITION: 126
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at DotNetTraining.Repositories.UserRepository.GetUserRoles(Guid userId) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 68
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 138
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column ur.roleid does not exist
+    Hint: Perhaps you meant to reference the column "ur.role_id".
+    Position: 126
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2025-07-17 14:46:27.231 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:46:27.685 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user1112@example.com
+2025-07-17 14:46:28.184 +07:00 [ERR] [ AUTH ] - Register error for: user1112@example.com
+System.NotImplementedException: The method or operation is not implemented.
+   at DotNetTraining.Repositories.UserRepository.AssignRoleToUserAsync(UserRole userRole) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 83
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 126
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+2025-07-17 14:48:21.648 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:48:22.321 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user222@example.com
+2025-07-17 14:48:22.945 +07:00 [ERR] [ AUTH ] - Register error for: user222@example.com
+System.NotImplementedException: The method or operation is not implemented.
+   at DotNetTraining.Repositories.UserRepository.AssignRoleToUserAsync(UserRole userRole) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 83
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 126
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+2025-07-17 14:49:51.320 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:49:51.716 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user222@example.com
+2025-07-17 14:49:51.936 +07:00 [ERR] [ AUTH ] - Register error for: user222@example.com
+System.Exception: Email đã tồn tại
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 104
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+2025-07-17 14:49:59.351 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user2221@example.com
+2025-07-17 14:49:59.738 +07:00 [ERR] [ AUTH ] - Register error for: user2221@example.com
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" of relation "user_roles" does not exist
+
+POSITION: 24
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at DotNetTraining.Repositories.UserRepository.AssignRoleToUserAsync(UserRole userRole) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 84
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 126
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" of relation "user_roles" does not exist
+    Position: 24
+    File: parse_target.c
+    Line: 1070
+    Routine: checkInsertTargets
+2025-07-17 14:52:40.358 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:52:41.028 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user2221@example.com
+2025-07-17 14:52:41.235 +07:00 [ERR] [ AUTH ] - Register error for: user2221@example.com
+System.Exception: Email đã tồn tại
+   at DotNetTraining.Services.UserService.RegisterAsync(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 104
+   at DotNetTraining.Controllers.AuthController.Register(UserRegisterRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 68
+2025-07-17 14:52:45.227 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user2222@example.com
+2025-07-17 14:52:45.548 +07:00 [INF] [ AUTH ] - Register success: user2222@example.com
+2025-07-17 14:52:57.819 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2222@example.com
+2025-07-17 14:52:58.032 +07:00 [ERR] [ AUTH ] - Login error for: user2222@example.com
+Npgsql.PostgresException (0x80004005): 42703: column ur.roleid does not exist
+
+POSITION: 102
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at DotNetTraining.Repositories.UserRepository.GetUserRoles(Guid userId) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 65
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 150
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column ur.roleid does not exist
+    Hint: Perhaps you meant to reference the column "ur.RoleId".
+    Position: 102
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2025-07-17 14:57:32.481 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 14:57:32.992 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2222@example.com
+2025-07-17 14:57:33.417 +07:00 [ERR] [ AUTH ] - Login error for: user2222@example.com
+Npgsql.PostgresException (0x80004005): 42703: column ur.roleid does not exist
+
+POSITION: 102
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at DotNetTraining.Repositories.UserRepository.GetUserRoles(Guid userId) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 65
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 150
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column ur.roleid does not exist
+    Hint: Perhaps you meant to reference the column "ur.RoleId".
+    Position: 102
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2025-07-17 15:07:05.806 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:07:06.244 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user@example.com
+2025-07-17 15:07:06.532 +07:00 [INF] [ AUTH ] - Register success: user@example.com
+2025-07-17 15:13:08.259 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:13:08.886 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user1@example.com
+2025-07-17 15:13:09.273 +07:00 [INF] [ AUTH ] - Register success: user1@example.com
+2025-07-17 15:13:34.156 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 15:13:34.428 +07:00 [ERR] [ AUTH ] - Login error for: user1@example.com
+Npgsql.PostgresException (0x80004005): 42703: column ur.roleid does not exist
+
+POSITION: 102
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at DotNetTraining.Repositories.UserRepository.GetUserRoles(Guid userId) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Repositories\UserRepository.cs:line 65
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 152
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column ur.roleid does not exist
+    Hint: Perhaps you meant to reference the column "ur.RoleId".
+    Position: 102
+    File: parse_relation.c
+    Line: 3732
+    Routine: errorMissingColumn
+2025-07-17 15:19:45.074 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:19:45.703 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 15:19:47.223 +07:00 [INF] [ AUTH ] - Login success for: user1@example.com
+2025-07-17 15:22:05.822 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:22:06.274 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 15:22:06.612 +07:00 [INF] [ AUTH ] - Login success for: user1@example.com
+2025-07-17 15:22:22.305 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 15:28:33.592 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:28:33.662 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 15:30:29.890 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:30:29.958 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 15:31:28.756 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:31:28.824 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 15:31:50.908 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 15:31:51.374 +07:00 [INF] [ AUTH ] - Login success for: user1@example.com
+2025-07-17 15:32:07.096 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 15:40:44.869 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:54:10.321 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 15:54:11.012 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 15:54:11.296 +07:00 [INF] [ AUTH ] - Login success for: user1@example.com
+2025-07-17 15:54:30.402 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 16:13:19.983 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-17 16:13:20.534 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user1@example.com
+2025-07-17 16:13:20.886 +07:00 [INF] [ AUTH ] - Login success for: user1@example.com
+2025-07-17 16:13:34.861 +07:00 [INF] AuthenticationScheme: Jwt was challenged.
+2025-07-17 16:13:46.370 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-17 16:13:46.399 +07:00 [INF] [ PRODUCT ] - Returned 5 products
