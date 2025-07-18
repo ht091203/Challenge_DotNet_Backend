@@ -1,0 +1,91 @@
+2025-07-18 09:16:03.825 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:16:05.148 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2@example.com
+2025-07-18 09:16:07.204 +07:00 [INF] [ AUTH ] - Login success for: user2@example.com
+2025-07-18 09:21:04.309 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:21:05.225 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2@example.com
+2025-07-18 09:21:05.581 +07:00 [INF] [ AUTH ] - Login success for: user2@example.com
+2025-07-18 09:21:32.940 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 09:21:32.970 +07:00 [INF] [ USER ] - Returned 3 users
+2025-07-18 09:22:30.790 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:23:35.961 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:23:56.976 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:23:57.492 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2@example.com
+2025-07-18 09:23:57.786 +07:00 [INF] [ AUTH ] - Login success for: user2@example.com
+2025-07-18 09:26:50.205 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:26:50.842 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user2@example.com
+2025-07-18 09:26:51.203 +07:00 [INF] [ AUTH ] - Login success for: user2@example.com
+2025-07-18 09:27:04.181 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 09:27:04.203 +07:00 [INF] [ USER ] - Returned 3 users
+2025-07-18 09:33:44.113 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:33:44.888 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 09:33:45.697 +07:00 [ERR] [ AUTH ] - Login error for: admin@example.com
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Microsoft.AspNetCore.Identity.PasswordHasher`1.VerifyHashedPassword(TUser user, String hashedPassword, String providedPassword)
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 146
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+2025-07-18 09:50:32.505 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:50:33.040 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 09:50:33.247 +07:00 [ERR] [ AUTH ] - Login error for: admin@example.com
+System.UnauthorizedAccessException: Email hoặc mật khẩu không đúng
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 149
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+2025-07-18 09:54:09.532 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 09:54:09.621 +07:00 [ERR] [ AUTH ] - Login error for: admin@example.com
+System.UnauthorizedAccessException: Email hoặc mật khẩu không đúng
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 149
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+2025-07-18 09:54:42.103 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 09:54:42.579 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user@example.com
+2025-07-18 09:54:42.764 +07:00 [ERR] [ AUTH ] - Login error for: user@example.com
+System.UnauthorizedAccessException: Email hoặc mật khẩu không đúng
+   at DotNetTraining.Services.UserService.LoginAsync(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Services\UserService.cs:line 149
+   at DotNetTraining.Controllers.AuthController.Login(UserLoginRequest request) in C:\Users\ht0912\Desktop\ThucTap\Tuan3\Challange4\DotNetTraining\DotNetTraining\Controllers\v1\AuthController.cs:line 37
+2025-07-18 10:05:59.026 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:05:59.828 +07:00 [INF] [ AUTH ] - [POST] Register attempt: user@example.com
+2025-07-18 10:06:00.301 +07:00 [INF] [ AUTH ] - Register success: user@example.com
+2025-07-18 10:06:17.838 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user@example.com
+2025-07-18 10:06:18.020 +07:00 [INF] [ AUTH ] - Login success for: user@example.com
+2025-07-18 10:07:21.787 +07:00 [INF] [ USER ] - [POST] Create user: admin@example.com
+2025-07-18 10:07:21.788 +07:00 [WRN] [ USER ] - Invalid model state
+2025-07-18 10:08:24.203 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:08:24.854 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user@example.com
+2025-07-18 10:08:25.202 +07:00 [INF] [ AUTH ] - Login success for: user@example.com
+2025-07-18 10:08:51.868 +07:00 [INF] [ USER ] - [POST] Create user: admin@example.com
+2025-07-18 10:10:08.772 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:10:09.209 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:10:09.444 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:10:23.889 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 10:10:23.921 +07:00 [INF] [ USER ] - Returned 2 users
+2025-07-18 10:10:40.714 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user@example.com
+2025-07-18 10:10:40.794 +07:00 [INF] [ AUTH ] - Login success for: user@example.com
+2025-07-18 10:16:36.402 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:18:16.947 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:18:17.449 +07:00 [INF] [ AUTH ] - [POST] Login attempt: user@example.com
+2025-07-18 10:18:17.717 +07:00 [INF] [ AUTH ] - Login success for: user@example.com
+2025-07-18 10:19:38.476 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:19:39.132 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:19:39.505 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:20:02.073 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 10:20:02.101 +07:00 [INF] [ USER ] - Returned 2 users
+2025-07-18 10:20:24.182 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-18 10:20:24.205 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+2025-07-18 10:43:28.809 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:43:44.848 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:43:45.148 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:43:57.181 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-18 10:43:57.209 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+2025-07-18 10:44:38.311 +07:00 [INF] [ CATEGORY ] - [GET] Get all categories
+2025-07-18 10:44:38.334 +07:00 [INF] [ CATEGORY ] - Returned 2 categories
+2025-07-18 10:44:43.894 +07:00 [INF] [ ORDER ] - [GET] Get all orders
+2025-07-18 10:44:43.910 +07:00 [INF] [ ORDER ] - Returned 1 orders
+2025-07-18 10:49:19.450 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:49:19.998 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:49:20.255 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:49:32.447 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 10:49:32.467 +07:00 [INF] [ USER ] - Returned 2 users
+2025-07-18 10:49:37.816 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-18 10:49:37.835 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+2025-07-18 10:49:42.079 +07:00 [INF] [ ORDER ] - [GET] Get all orders
+2025-07-18 10:49:42.092 +07:00 [INF] [ ORDER ] - Returned 1 orders

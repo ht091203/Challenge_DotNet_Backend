@@ -1,7 +1,6 @@
 ﻿using Common.Loggers.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
 using ILogger = Serilog.ILogger;
 
 namespace Common.Loggers.SeriLog
@@ -12,29 +11,15 @@ namespace Common.Loggers.SeriLog
 
         public LogManager(string envName)
         {
-            var loggerConfiguration = CreateLoggerConfiguration(envName);
-            _logger = loggerConfiguration.CreateLogger();
-        }
-        protected virtual LoggerConfiguration CreateLoggerConfiguration(string envName)
-        {
-            var loggerConfiguration = new LoggerConfiguration()
-               .MinimumLevel.Information()
-               .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-               .Enrich.FromLogContext()
-               .WriteTo.Console();
-
-            if (envName == Environments.Development)
-            {
-                loggerConfiguration = loggerConfiguration.WriteTo.Debug();
-            }
-            return loggerConfiguration;
+            _logger = Log.Logger; 
         }
 
         private static string FormatMessage(string message, string prefix)
         {
-            var pref = string.IsNullOrEmpty(prefix) ? string.Empty : $"[ { prefix }]-";
-            return $"{ pref}{ message }";
+            var pref = string.IsNullOrEmpty(prefix) ? string.Empty : $"[ {prefix} ] - ";
+            return $"{pref}{message}";
         }
+
         public void Debug(string message, string prefix = "")
         {
             _logger.Debug(FormatMessage(message, prefix));
