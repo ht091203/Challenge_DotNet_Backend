@@ -21,6 +21,11 @@ namespace DotNetTraining.Repositories
             var sql = SqlCommandHelper.GetSelectSqlWithCondition<Product>(new { Id = productId });
             return await GetOneByConditionAsync(sql, param);
         }
+        public async Task<List<Product>> GetByCategoryId(Guid categoryId)
+        {
+            var sql = @"SELECT * FROM products WHERE ""CategoryId"" = @CategoryId";
+            return (await connection.QueryAsync<Product>(sql, new { CategoryId = categoryId })).ToList();
+        }
 
         public async Task<Product?> UpdateProduct(Product product)
         {

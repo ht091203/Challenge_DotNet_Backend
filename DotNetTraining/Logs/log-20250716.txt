@@ -1,0 +1,12 @@
+2025-07-16 13:22:26.039 +07:00 [INF] [ STARTUP ] - Starting additional configuration...
+2025-07-16 13:22:26.143 +07:00 [INF] [ STARTUP ] - Authentication and authorization configured.
+2025-07-16 13:22:35.927 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-16 13:22:36.786 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-16 13:22:36.904 +07:00 [INF] [ USER ] - Returned 2 users
+2025-07-16 13:22:38.191 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-16 13:22:38.235 +07:00 [INF] [ PRODUCT ] - Returned 5 products
+2025-07-16 13:34:48.807 +07:00 [INF] [ STARTUP ] - 🔧 Starting additional configuration...
+2025-07-16 13:34:49.134 +07:00 [INF] [ STARTUP ] - ✅ Authentication and authorization configured.
+2025-07-16 14:10:01.628 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-16 14:10:02.248 +07:00 [INF] [ LOGIN ] - Login attempt
+2025-07-16 14:10:02.631 +07:00 [ERR] [ LOGIN ] - Unexpected error during login for user1@example.com
