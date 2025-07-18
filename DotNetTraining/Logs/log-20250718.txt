@@ -71,3 +71,24 @@ System.UnauthorizedAccessException: Email hoặc mật khẩu không đúng
 2025-07-18 10:20:02.101 +07:00 [INF] [ USER ] - Returned 2 users
 2025-07-18 10:20:24.182 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
 2025-07-18 10:20:24.205 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+<<<<<<< HEAD
+=======
+2025-07-18 10:43:28.809 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:43:44.848 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:43:45.148 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:43:57.181 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-18 10:43:57.209 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+2025-07-18 10:44:38.311 +07:00 [INF] [ CATEGORY ] - [GET] Get all categories
+2025-07-18 10:44:38.334 +07:00 [INF] [ CATEGORY ] - Returned 2 categories
+2025-07-18 10:44:43.894 +07:00 [INF] [ ORDER ] - [GET] Get all orders
+2025-07-18 10:44:43.910 +07:00 [INF] [ ORDER ] - Returned 1 orders
+2025-07-18 10:49:19.450 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-07-18 10:49:19.998 +07:00 [INF] [ AUTH ] - [POST] Login attempt: admin@example.com
+2025-07-18 10:49:20.255 +07:00 [INF] [ AUTH ] - Login success for: admin@example.com
+2025-07-18 10:49:32.447 +07:00 [INF] [ USER ] - [GET] Get all users
+2025-07-18 10:49:32.467 +07:00 [INF] [ USER ] - Returned 2 users
+2025-07-18 10:49:37.816 +07:00 [INF] [ PRODUCT ] - [GET] Get all products
+2025-07-18 10:49:37.835 +07:00 [INF] [ PRODUCT ] - Returned 2 products
+2025-07-18 10:49:42.079 +07:00 [INF] [ ORDER ] - [GET] Get all orders
+2025-07-18 10:49:42.092 +07:00 [INF] [ ORDER ] - Returned 1 orders
+>>>>>>> b41c43870d1024dc9d2a9c3e68997ba3448fa08a
