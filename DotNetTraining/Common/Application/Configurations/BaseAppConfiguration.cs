@@ -208,6 +208,7 @@ namespace Common.Application.Configurations
             setting.STORAGE_ATTACHMENTS = ConfigAppSetting.LoadToObjectAllowNull<string>(configuration, "STORAGE_ATTACHMENTS")!;
             setting.OMSInterfaceSetting = ConfigAppSetting.LoadToObjectAllowNull<OMSInterfaceSetting>(configuration, "OMSInterfaceSetting")!;
             setting.DOMAIN_URL = ConfigAppSetting.LoadToObjectAllowNull<string>(configuration, "DOMAIN_URL");
+
             //Add more specific setting here
             LoadAdditionalSetting(setting, configuration);
 

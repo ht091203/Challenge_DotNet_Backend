@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using Asp.Versioning.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -59,23 +59,28 @@ namespace Common.Application.Configurations
              });
         }
     }
-
     public abstract class BaseConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
-        private readonly IApiVersionDescriptionProvider _provider;
+        protected readonly IApiVersionDescriptionProvider _provider;
 
         protected abstract OpenApiInfo GetApiInfo(ApiVersionDescription description);
         public BaseConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) => _provider = provider;
 
-        public void Configure(SwaggerGenOptions options)
+        public virtual void Configure(SwaggerGenOptions options)
         {
+            Console.WriteLine("SwaggerGen called from " + this.GetType().Name);
+            var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
             foreach (var description in _provider.ApiVersionDescriptions)
             {
+                Console.WriteLine($" - Group: {description.GroupName}, Version: {description.ApiVersion}");
+
+                if (!seen.Add(description.GroupName)) continue;
+
                 options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
             }
         }
-
-        private OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
+        protected OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
         {
             var info = GetApiInfo(description);
 

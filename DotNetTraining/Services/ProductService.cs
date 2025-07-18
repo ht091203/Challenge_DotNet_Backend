@@ -32,10 +32,14 @@ namespace DotNetTraining.Services
             {
                 throw new Exception("Product not exist");
             }
-            // map entity to Dto
             var dto = _mapper.Map<ProductDto>(existingProduct);
             
             return dto;
+        }
+        public async Task<List<ProductDto>> GetByCategoryId(Guid categoryId)
+        {
+            var products = await _repo.GetByCategoryId(categoryId);
+            return _mapper.Map<List<ProductDto>>(products);
         }
 
         public async Task<Product?> UpdateProduct(Guid productId,ProductDto productDto)
@@ -70,7 +74,6 @@ namespace DotNetTraining.Services
             var product = _mapper.Map<Product>(newProduct);
             product.Id = Guid.NewGuid();
 
-            // Gọi repository để lưu vào DB
             return await _repo.CreateProduct(product);
         }
     }

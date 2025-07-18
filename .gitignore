@@ -10,3 +10,5 @@
 /BPMaster/BPMaster.csproj.user
 /BPMaster/.config
 /BPMaster/Properties
+bin/ 
+obj/ 
